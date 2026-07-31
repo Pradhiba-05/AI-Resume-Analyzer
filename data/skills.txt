@@ -1,0 +1,28 @@
+Python
+Java
+C++
+SQL
+MySQL
+MongoDB
+FastAPI
+Flask
+Django
+React
+HTML
+CSS
+JavaScript
+Git
+GitHub
+Machine Learning
+Deep Learning
+TensorFlow
+PyTorch
+Pandas
+NumPy
+Power BI
+Tableau
+Docker
+AWS
+Azure
+Linux
+REST API
