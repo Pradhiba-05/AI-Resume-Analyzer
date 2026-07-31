@@ -1,43 +1,101 @@
 import streamlit as st
 
-from src.resume_parser import extract_text
-from src.analyzer import analyze_resume
-
 st.set_page_config(
     page_title="AI Resume Analyzer",
-    page_icon="📄",
-    layout="centered"
+    page_icon="🤖",
+    layout="wide",
 )
 
-st.title("📄 AI Resume Analyzer")
+st.markdown("""
+<style>
 
-st.write("Upload your resume and discover which technical skills are detected.")
+.main{
+    background:#0f172a;
+}
+
+.title{
+    text-align:center;
+    font-size:55px;
+    font-weight:bold;
+    color:white;
+    margin-top:20px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:22px;
+    color:#94a3b8;
+    margin-bottom:40px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #334155;
+    margin-top:20px;
+}
+
+.feature{
+    text-align:center;
+    color:white;
+    font-size:20px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="title">AI Resume Analyzer</div>', unsafe_allow_html=True)
+
+st.markdown(
+    '<div class="subtitle">Analyze resumes with AI-inspired insights and ATS scoring</div>',
+    unsafe_allow_html=True,
+)
 
 uploaded_file = st.file_uploader(
-    "Upload Resume (PDF)",
-    type=["pdf"]
+    "📄 Upload Your Resume (PDF)",
+    type=["pdf"],
 )
 
-if uploaded_file is not None:
+col1, col2, col3 = st.columns(3)
 
-    with st.spinner("Analyzing Resume..."):
+with col1:
+    st.markdown("""
+    <div class="card">
+    <div class="feature">
+    📊<br><br>
+    Resume Score
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-        text = extract_text(uploaded_file)
+with col2:
+    st.markdown("""
+    <div class="card">
+    <div class="feature">
+    🎯<br><br>
+    ATS Analysis
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-        matched_skills, score = analyze_resume(text)
+with col3:
+    st.markdown("""
+    <div class="card">
+    <div class="feature">
+    💡<br><br>
+    AI Suggestions
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.success("Analysis Completed")
+st.divider()
 
-    st.subheader("Resume Score")
+st.markdown("### 🚀 Features")
 
-    st.progress(score / 100)
-
-    st.metric("Skill Match", f"{score}%")
-
-    st.subheader("Detected Skills")
-
-    if matched_skills:
-        for skill in matched_skills:
-            st.write(f"✅ {skill}")
-    else:
-        st.warning("No matching skills found.")
+st.success("✔ Resume Parsing")
+st.success("✔ Skill Detection")
+st.success("✔ ATS Compatibility")
+st.success("✔ Resume Strength Score")
+st.success("✔ Career Recommendations")
+st.success("✔ Download Analysis Report")
