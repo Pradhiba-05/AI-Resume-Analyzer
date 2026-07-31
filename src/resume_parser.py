@@ -3,15 +3,24 @@ from PyPDF2 import PdfReader
 
 def extract_text(pdf_file):
     """
-    Extract text from an uploaded PDF resume.
+    Extract text from the uploaded PDF.
     """
-    reader = PdfReader(pdf_file)
 
-    text = ""
+    try:
 
-    for page in reader.pages:
-        page_text = page.extract_text()
-        if page_text:
-            text += page_text + "\n"
+        reader = PdfReader(pdf_file)
 
-    return text
+        text = ""
+
+        for page in reader.pages:
+
+            page_text = page.extract_text()
+
+            if page_text:
+                text += page_text + "\n"
+
+        return text
+
+    except Exception:
+
+        return ""
