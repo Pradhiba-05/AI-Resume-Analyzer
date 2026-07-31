@@ -1,5 +1,9 @@
 streamlit==1.49.1
 PyPDF2==3.0.1
 pandas==2.3.2
-numpy 
-matplotlib
+numpy==2.3.2
+scikit-learn==1.7.1
+matplotlib==3.10.5
+seaborn==0.13.2
+python-docx==1.2.0
+Pillow==11.3.0
