@@ -1,3 +1,5 @@
 streamlit==1.49.1
 PyPDF2==3.0.1
 pandas==2.3.2
+numpy 
+matplotlib
