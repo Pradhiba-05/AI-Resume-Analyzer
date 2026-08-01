@@ -1,4 +1,4 @@
-````md
+
 <div align="center">
 
 <img src="https://img.shields.io/badge/Smart%20Resume%20Analyzer-AI%20Powered-blueviolet?style=for-the-badge"/>
