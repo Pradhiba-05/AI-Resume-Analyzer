@@ -256,9 +256,7 @@ Feel free to use, modify, and improve it for learning.
 <div align="center">
 
 ## ✨ Thank You for Visiting !!
-
 ### Made with ❤️ by **Pradhiba S**
 
 </div>
 
-```
