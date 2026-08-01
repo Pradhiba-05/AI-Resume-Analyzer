@@ -224,22 +224,6 @@ Based on detected skills, the application recommends roles such as
 
 ---
 
-#  Screenshots
-
-```html
-
-<h3>🏠 Home Page</h3>
-
-<img src="assets/home.png" width="100%">
-
-
-<h3>📊 Analysis Result</h3>
-
-<img src="assets/result.png" width="100%">
-```
-
----
-
 # 📦 Requirements
 
 ```text
@@ -267,9 +251,6 @@ This project is intended for educational and portfolio purposes.
 
 Feel free to use, modify, and improve it for learning.
 
----
-
-```md
 ---
 
 <div align="center">
